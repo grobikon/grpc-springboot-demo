@@ -1,4 +1,4 @@
-package ru.grobikon.common.proto;
+package ru.grobikon.commonproto;
 
 import ru.grobikon.Author;
 import ru.grobikon.Book;

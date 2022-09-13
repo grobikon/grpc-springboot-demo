@@ -25,17 +25,21 @@ service BookAuthorService {
 
   //unary - synchronous
   //client will send one request and server will respond with one response.
+  //(клиент отправит один запрос, а сервер ответит одним ответом.)
   rpc getAuthor(Author) returns(Author){}
 
   //sever streaming - Asynchronous
   //client will send one request and server will send stream of response to the client.
-  //rpc getBooksByAuthor(Author) returns(stream Book){}
+  //(клиент отправит один запрос, а сервер отправит клиенту поток ответов.)
+  rpc getBooksByAuthor(Author) returns(stream Book){}
 
   //client streaming - Asynchronous
   //client will stream of request and server will respond with one response.
-  //rpc getExpensiveBook(stream Book) returns(Book){}
+  //(клиент будет потоком запросов, а сервер ответит одним ответом.)
+  rpc getExpensiveBook(stream Book) returns(Book){}
 
   //bi-directional streaming - Asynchronous
   //client will send stream of request and server will respond with stream of response.
-  //rpc getBooksByGender(stream Book) returns (stream Book) {}
+  //(клиент отправит поток запросов, а сервер ответит потоком ответов.)
+  rpc getBooksByGender(stream Book) returns (stream Book) {}
 }

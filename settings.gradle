@@ -1,5 +1,5 @@
 rootProject.name = 'grpc-springboot-demo'
 
-includeBuild 'proto'
+includeBuild 'common-proto'
 includeBuild 'grpc-service'
 includeBuild 'grpc-client'
